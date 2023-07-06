@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellTabsUnloadedBug.MainPage">
+
+    <Grid RowDefinitions="*, *">
+        <Label Grid.Row="0"
+               Text="To reproduce: Run on Android, Press button below, Press second tab, Press first tab. Watch debug output: Unloaded event fires when SecondPage appears, but it hasn't been unloaded yet."
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Button Grid.Row="1"
+                Text="Open SecondPage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="Button_OnClicked" />
+    </Grid>
+
+</ContentPage>
